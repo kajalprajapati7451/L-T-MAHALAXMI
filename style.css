@@ -305,10 +305,6 @@ img, iframe, video, svg {
   display: block;
 }
 
-/* Extra safety for containers */
-.container, .navbar-inner, .footer-inner, .cs-inner, .location-section .container {
-  overflow-x: hidden;
-}
 
 /* Fix potential marquee overflow on small screens */
 @media (max-width: 576px) {
