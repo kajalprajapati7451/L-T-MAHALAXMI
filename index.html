@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="L&T Mahalaxmi – Luxury Residences Coming Soon in the Heart of South Mumbai.">
+<title>L&T Mahalaxmi – Luxury Residences | South Mumbai</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ══ NAVBAR ══ -->
+<nav id="navbar">
+  <div class="navbar-inner">
+    <a href="#home" class="nav-brand">
+      <span class="nav-brand-main">L&amp;T Mahalaxmi</span>
+      <span class="nav-brand-sub">South Mumbai &middot; Luxury Residences</span>
+    </a>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#location">Location</a>
+      <a href="javascript:void(0)" onclick="openPopup()" class="nav-cta">Enquire Now</a>
+    </div>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="#home" onclick="closeMob()">Home</a>
+  <a href="#location" onclick="closeMob()">Location</a>
+  <a href="javascript:void(0)" class="mob-enq-link" onclick="closeMob();openPopup()">Enquire Now</a>
+</div>
+
+<!-- ══ HERO ══ -->
+<section class="hero" id="home">
+  <!-- Left content -->
+  <div class="hero-left">
+    <div class="hero-badge"><span class="badge-dot"></span>&nbsp;Coming Soon &bull; Pre-Launch</div>
+    <p class="hero-loc-tag">Mahalaxmi, South Mumbai &mdash; Maharashtra</p>
+    <h1 class="hero-h1">L&amp;T<br><em>Mahalaxmi</em></h1>
+    <p class="hero-tagline">Luxury Residences in the Heart of South Mumbai — where heritage meets contemporary elegance.</p>
+    <div class="hero-rule"></div>
+    <div class="hero-bullets">
+      <div class="hero-bullet"><div class="bicon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="hero-bullet-text">Premium Luxury Residences</span></div>
+      <div class="hero-bullet"><div class="bicon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="hero-bullet-text">Prime Mahalaxmi Location</span></div>
+      <div class="hero-bullet"><div class="bicon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="hero-bullet-text">Developed by L&amp;T Realty</span></div>
+    </div>
+    <div class="price-tag">
+      <span class="price-lbl">Starting From</span>
+      <span class="price-val">&#8377; X Cr*</span>
+    </div>
+    <!-- Top to bottom stacked buttons -->
+    <div class="hero-cta-group">
+      <a href="javascript:void(0)" class="btn-white" onclick="openPopup()">
+        Get Cost Sheet
+        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <a href="javascript:void(0)" class="btn-gold-outline" onclick="openPopup()">
+        Book Site Visit
+        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Right: glass form — same bg image shows through, no bg color -->
+  <div class="hero-right" id="enquire">
+    <div class="form-glass">
+      <p class="form-eyebrow">Express Interest</p>
+      <h2 class="form-title">Get Exclusive<br>Details</h2>
+      <p class="form-sub">Share your details — our team will contact you within 2 hours</p>
+      <form id="heroForm" onsubmit="submitForm(event,'heroForm','heroBtn')">
+        <div class="f-group">
+          <label for="h-name">Full Name</label>
+          <input type="text" id="h-name" placeholder="Your full name" required autocomplete="name">
+        </div>
+        <div class="f-group">
+          <label for="h-phone">Phone Number</label>
+          <input type="tel" id="h-phone" placeholder="+91 00000 00000" required autocomplete="tel">
+        </div>
+        <div class="f-group">
+          <label for="h-pref">Preference</label>
+          <select id="h-pref" required>
+            <option value="" disabled selected>Select preference</option>
+            <option>Get Cost Sheet</option>
+            <option>Book Site Visit</option>
+            <option>Floor Plans</option>
+            <option>Early-Bird Pricing</option>
+          </select>
+        </div>
+        <button type="submit" class="form-btn" id="heroBtn">Enquire Now</button>
+      </form>
+      <p class="form-privacy">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        We respect your privacy. Your information is secure.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ COMING SOON SECTION (no countdown) ══ -->
+<section class="cs-section" id="coming-soon">
+  <div class="cs-inner">
+    <p class="cs-eyebrow">Pre-Launch</p>
+    <h2 class="cs-title">L&amp;T <em>Mahalaxmi</em><br>Launching Soon</h2>
+    <p class="cs-desc">South Mumbai's most anticipated luxury address is almost here. Secure your early-bird advantage before the official launch — limited residences available.</p>
+    <div class="cs-highlights">
+      <div class="cs-hl"><span class="cs-hl-val">5+</span><span class="cs-hl-lbl">Acres</span></div>
+      <div class="cs-hl"><span class="cs-hl-val">100+</span><span class="cs-hl-lbl">Luxury Homes</span></div>
+      <div class="cs-hl"><span class="cs-hl-val">20+</span><span class="cs-hl-lbl">Amenities</span></div>
+      <div class="cs-hl"><span class="cs-hl-val">RERA</span><span class="cs-hl-lbl">Registered</span></div>
+    </div>
+    <button class="cs-cta" onclick="openPopup()">
+      Register Your Interest
+      <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </button>
+    <div class="cs-ticker">
+      <div class="cs-marquee">
+        <div class="cs-mi"><strong>L&amp;T Mahalaxmi</strong><span class="cs-dot">&bull;</span>Premium Residences &bull; South Mumbai<span class="cs-dot">&bull;</span></div>
+        <div class="cs-mi">Exclusive Pre-Launch Pricing<span class="cs-dot">&bull;</span>Limited Inventory<span class="cs-dot">&bull;</span></div>
+        <div class="cs-mi"><strong>L&amp;T Realty</strong><span class="cs-dot">&bull;</span>Mahalaxmi, Mumbai<span class="cs-dot">&bull;</span>Register Today<span class="cs-dot">&bull;</span></div>
+        <div class="cs-mi"><strong>L&amp;T Mahalaxmi</strong><span class="cs-dot">&bull;</span>Premium Residences &bull; South Mumbai<span class="cs-dot">&bull;</span></div>
+        <div class="cs-mi">Exclusive Pre-Launch Pricing<span class="cs-dot">&bull;</span>Limited Inventory<span class="cs-dot">&bull;</span></div>
+        <div class="cs-mi"><strong>L&amp;T Realty</strong><span class="cs-dot">&bull;</span>Mahalaxmi, Mumbai<span class="cs-dot">&bull;</span>Register Today<span class="cs-dot">&bull;</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ LOCATION ══ -->
+<section class="location-section" id="location">
+  <div class="container" style="max-width:1260px">
+    <div class="row g-5 align-items-start">
+      <div class="col-lg-6">
+        <p class="sec-eyebrow rv">Connectivity</p>
+        <h2 class="sec-title rv">Prime Location &mdash;<br><em>Mahalaxmi, Mumbai</em></h2>
+        <p class="sec-body rv">Strategically nestled in South Mumbai's most coveted neighbourhood — moments from iconic landmarks, business hubs, and lifestyle destinations.</p>
+        <div class="loc-list">
+          <div class="loc-item rv d1"><div class="loc-num">01</div><div><p class="loc-title">Mahalaxmi Racecourse</p><p class="loc-desc">Iconic Mumbai landmark right at your doorstep with unobstructed views</p><span class="loc-dist">Walking distance</span></div></div>
+          <div class="loc-item rv d2"><div class="loc-num">02</div><div><p class="loc-title">Worli &amp; Lower Parel</p><p class="loc-desc">Easy access to Mumbai's premier business and entertainment corridors</p><span class="loc-dist">5 min drive</span></div></div>
+          <div class="loc-item rv d3"><div class="loc-num">03</div><div><p class="loc-title">Business Districts</p><p class="loc-desc">BKC, Nariman Point and Fort business hubs within easy commuting distance</p><span class="loc-dist">15–20 min</span></div></div>
+          <div class="loc-item rv d4"><div class="loc-num">04</div><div><p class="loc-title">Premium South Mumbai</p><p class="loc-desc">Surrounded by Malabar Hill, Pedder Road — finest address in Mumbai</p><span class="loc-dist">Prime Neighbourhood</span></div></div>
+        </div>
+        <div class="loc-cta-wrap rv">
+          <a href="javascript:void(0)" class="btn-navy" onclick="openPopup()">Book a Site Visit</a>
+          <a href="tel:+912200001111" class="btn-outline-navy">Call Us</a>
+        </div>
+      </div>
+      <div class="col-lg-6 rv-r">
+        <div class="map-wrap">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.5!2d72.8347!3d18.9809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce5aee1e9acd%3A0x5a3a0a92c8f53a9e!2sMahalaxmi%2C%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Location"></iframe>
+        </div>
+        <div class="map-foot">
+          <div><p class="map-foot-label">Project Location</p><p class="map-foot-val">Mahalaxmi, Mumbai, Maharashtra 400011</p></div>
+          <a href="https://maps.google.com/?q=Mahalaxmi,Mumbai" target="_blank" rel="noopener" class="map-dir">Get Directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand-name">L&amp;T Mahalaxmi</p>
+        <p class="footer-brand-sub">Luxury Residences &mdash; Mahalaxmi, South Mumbai</p>
+        <div class="footer-ci"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 012.09 5.18 2 2 0 014.07 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 10.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><a href="tel:+912200001111">+91 22 0000 1111</a></div>
+        <div class="footer-ci"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:info@ltmahalaxmi.in">info@ltmahalaxmi.in</a></div>
+      </div>
+      <div>
+        <p class="footer-col-title">Quick Links</p>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#location">Location</a>
+          <a href="javascript:void(0)" onclick="openPopup()">Enquire</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title">Project Info</p>
+        <div class="footer-links">
+          <a href="#">About L&amp;T Realty</a>
+          <a href="#">Floor Plans</a>
+          <a href="#">Site Visit</a>
+          <a href="#">RERA Details</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-rera">RERA Registration: Application submitted. MahaRERA No. will be updated upon approval. This is not an offer or invitation to the public to subscribe for or purchase real estate units. Prices are indicative and subject to change. *T&amp;C Apply.</p>
+      <p class="footer-copy">&copy; 2026 L&amp;T Mahalaxmi. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ══ POPUP FORM ══ -->
+<div class="popup-overlay" id="popupOverlay" onclick="handleOverlayClick(event)">
+  <div class="popup-box" id="popupBox">
+    <div class="popup-top-bar"></div>
+    <div class="popup-body">
+      <button class="popup-close" onclick="closePopup()" aria-label="Close">
+        <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <p class="popup-eyebrow">Register Now</p>
+      <h3 class="popup-title">Get Exclusive<br>Launch Details</h3>
+      <p class="popup-sub">Our team will contact you within 2 hours with pricing, floor plans &amp; site visit options.</p>
+      <form id="popupForm" class="popup-form" onsubmit="submitForm(event,'popupForm','popupBtn')">
+        <div class="f-group">
+          <label for="p-name">Full Name</label>
+          <input type="text" id="p-name" placeholder="Your full name" required autocomplete="name">
+        </div>
+        <div class="f-group">
+          <label for="p-phone">Phone Number</label>
+          <input type="tel" id="p-phone" placeholder="+91 00000 00000" required autocomplete="tel">
+        </div>
+        <div class="f-group">
+          <label for="p-pref">Preference</label>
+          <select id="p-pref" required>
+            <option value="" disabled selected>Select preference</option>
+            <option>Get Cost Sheet</option>
+            <option>Book Site Visit</option>
+            <option>Floor Plans</option>
+            <option>Early-Bird Pricing</option>
+          </select>
+        </div>
+        <button type="submit" class="form-btn" id="popupBtn">Enquire Now</button>
+      </form>
+      <p class="popup-privacy">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        We respect your privacy. Your information is secure.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SCROLL TOP ══ -->
+<button id="toTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<!-- ══ MOBILE BAR ══ -->
+<div class="mob-bar">
+  <a href="tel:+912200001111" class="mob-btn mob-call"><span class="mob-icon">&#9990;</span>Call</a>
+  <a href="https://wa.me/912200001111?text=Hi%2C+I+am+interested+in+L%26T+Mahalaxmi+Mumbai." target="_blank" rel="noopener" class="mob-btn mob-wa"><span class="mob-icon">&#128172;</span>WhatsApp</a>
+  <button class="mob-btn mob-enq" onclick="openPopup()"><span class="mob-icon">&#9998;</span>Enquire</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
